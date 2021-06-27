@@ -20,7 +20,9 @@
         <div class="col p-4 d-flex flex-column position-static">
           
           <h3 class="mb-0">{{ .Title }}</h3>
-          <div class="mb-1 text-muted">{{ dateFormat "Jan 2, 2006" .PublishDate }}</div>
+          {{ with .PublishDate}}
+          <div class="mb-1 text-muted">{{ dateFormat "Jan 2, 2006" . }}</div>
+          {{ end }}
           <!-- {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
             <div class="mb-1 text-muted">{{ .PublishDate.Format $dateFormat }}</div>-->
             <p class="card-text mb-auto">{{ .Summary }}</p>

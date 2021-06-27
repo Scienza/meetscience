@@ -10,10 +10,13 @@
 <div class="container-xl post-content border rounded py-2 mt-5">
     <div class="post-header text-center">
         <h1>{{ .Title }}</h1>
-        <p class="blog-post-meta">{{ dateFormat "Jan 2, 2006" .PublishDate }} {{ with .GetTerms "authors"  }} di 
-            {{ range . }}
-            <a href="{{ .Permalink }}">{{ .LinkTitle }}</a> 
-            {{end}}
+        <p class="blog-post-meta">
+            {{ with .PublishDate}}{{ dateFormat "Jan 2, 2006" . }}{{ end }}
+            
+            {{ with .GetTerms "authors"  }} di 
+                {{ range . }}
+                <a href="{{ .Permalink }}">{{ .LinkTitle }}</a> 
+                {{end}}
             {{end}}</p>
         </div>
     <hr>
