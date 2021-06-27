@@ -2,7 +2,7 @@
 title: Pandry
 role: Tecnico
 avatar: images/icon.png
-bio: Sono Pandry, colui che in genere si occupa della regia e parte tecnica noiosa
+profession: Sono Pandry, colui che in genere si occupa della regia e parte tecnica noiosa
 organization:
   name: Freelance
   url: https://github.com/Pandry
