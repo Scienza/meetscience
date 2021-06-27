@@ -39,7 +39,7 @@ Index page
 }
 
 .index-social-logo:hover{
-  transform: translateY(-10px);
+  transform: translateY(-4px);
 }
 
 .bg-teal{
@@ -93,8 +93,31 @@ Index page
 }
 
 /*
-Blog
+Blog page list
 */
 
+.post-list-post-container{
+  transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.post-list-post-container:hover{
+  box-shadow: 6px 6px 6px rgba(0,0,0,0.4) !important;
+  transform: translateY(-8px);
+}
 
+.post-list-featured-image{
+  max-height: 250px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
 
+/*
+Blog page
+*/
+
+.post-featured-image{
+  max-height: 300px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}

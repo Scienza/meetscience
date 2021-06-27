@@ -1,22 +1,53 @@
-{{ define "main" }} 
+{{ define "main" }}
 
 
 <div class="container">
-<div class="heading">
-    <h1>{{ .Title }}</h1>
-    {{with .Params.Subtitle }} <p>{{ . }}</p>{{ end }}
-</div>
-<div class="posts">
-{{ range .Pages.ByPublishDate.Reverse }}
-<p>
-    <h3><a class="title" href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    {{ partial "meta.html" . }}
-    <a class="summary" href="{{ .RelPermalink }}">
-        <p>{{ .Summary }}</p>
-    </a>
-</p>
-{{ end }}
-</div>
+  <div class="row text-center py-5">
+    <div class="col heading align-self-center">
+      <h1>{{ .Title }}</h1>
+      {{with .Params.Subtitle }} <p>{{ . }}</p>{{ end }}
+    </div>
+    <div class="col">
+      <img src="/assets/illustrations/undraw_Browsing_online_re_umsa.svg" width=300px>
+    </div>
+  </div>
+  <div class="posts">
+    {{ range .Pages.ByPublishDate.Reverse }}
+
+
+    <div class="col border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative post-list-post-container">
+      <div class="row">
+        <div class="col p-4 d-flex flex-column position-static">
+          
+          <h3 class="mb-0">{{ .Title }}</h3>
+          <div class="mb-1 text-muted">{{ dateFormat "Jan 2, 2006" .PublishDate }}</div>
+          <!-- {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
+            <div class="mb-1 text-muted">{{ .PublishDate.Format $dateFormat }}</div>-->
+            <p class="card-text mb-auto">{{ .Summary }}</p>
+            
+                      {{ with .Params.tags }}
+                        <i data-feather="tag"></i>
+                        {{ range . }}
+                          {{ $href := print (absURL "tags/") (urlize .) }}
+                          <strong class="d-inline-block mb-2 badge bg-primary" style="width: max-content;"><!--<a href="{{ $href }}">-->{{ . }}<!--</a>--></strong>
+                        {{ end }}
+                      {{ end }}
+          <a href="{{ .RelPermalink }}" class="stretched-link left">Continua a leggere</a>
+        </div>
+        {{/* $img := (.Resources.ByType "image").GetMatch "images/*featured*" }}
+        {{ with $img */}}
+        {{ with .Params.featured_image }}
+        <div class="col-auto d-none d-lg-block">
+            <img class="post-list-featured-image" src="{{ . }}" alt="{{ $.Title }}" >
+        </div>
+        {{ end }}
+      </div>
+    </div>
+
+
+
+    {{ end }}
+  </div>
 
 </div>
 
