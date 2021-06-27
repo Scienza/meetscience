@@ -1,3 +1,7 @@
+/*
+Index page
+*/
+
 .container {
   max-width: 960px;
 }
@@ -30,6 +34,11 @@
   width: 40px;
   height: 40px;
   margin: 0 10px;
+  transition: 0.3s;
+}
+
+.index-social-logo:hover{
+  transform: translateY(-10px);
 }
 
 .bg-teal{
@@ -53,6 +62,8 @@
   width: 200px;
   height: 200px;
   border-radius: 100%;
+  object-fit: cover;
+  object-position: top;
 }
 
 .avatar-row::before{
@@ -63,7 +74,7 @@
   margin-bottom: 40px;
 }
 
-.avatar-social {
+.avatar-social-old {
   margin-top: 15px;
 }
 
@@ -71,3 +82,18 @@
   width: 30px;
   height: 30px;
 }
+
+.list-unlisted{
+  list-style: none;
+}
+
+.contacts-footer a {
+  color: #ddd
+}
+
+/*
+Blog
+*/
+
+
+

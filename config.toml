@@ -2,9 +2,9 @@ baseURL = "https://meetscience.it/"
 languageCode = "it-IT"
 title = "Meet Science"
 theme = "meetscience"
-[menu]
-  [[menu.main]]
-    name = "Posts"
-    pre = "pen-tool"
-    url = "/posts/"
-    weight = 2
+#[menu]
+#  [[menu.main]]
+#    name = "Posts"
+#    pre = "pen-tool"
+#    url = "/posts/"
+#    weight = 2
