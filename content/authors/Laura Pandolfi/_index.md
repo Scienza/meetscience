@@ -3,7 +3,7 @@ title: Laura Pandolfi
 roles:
   - Intervistatrice
 avatar: /assets/photos/Pandolfi.jpg
-bio: post-doc presso IRCCS Policlinico San Matteo di Pavia.
+profession: post-doc presso IRCCS Policlinico San Matteo di Pavia.
 organization:
   name: TGODO
   url: https://www.instagram.com/lestoriedellaricerca
