@@ -14,8 +14,6 @@ social:
     url: https://www.instagram.com/lestoriediunabiologa
 ---
 
-Laureata in Biologia applicata alla ricerca biomedica presso Università statale di Milano.  
-Dottorato in Biologa ottenuto presso Università di Milano Bicocca.  
-Ora post-doc presso IRCCS Policlinico San Matteo di Pavia.  
-Di cosa mi occupo? Applicare le nanotecnologie nell'ambito pneumologico per trovare una cura basata su nanoparticelle per pazienti che soffrono di rigetto cronico post-trapianto polmonare o fibrosi polmonare.  
-Sono moglie e mamma di due bambini e mi trovate anche su [Le storie di una biologa](https://www.instagram.com/lestoriediunabiologa)
+Laura è ricercatrice postdoc presso il IRCCS Policlinico San Matteo di Pavia. Si è laureata in Biologia applicata alla ricerca biomedica presso Università statale di Milano e dottorata in Biologa ottenuto presso Università di Milano Bicocca.  
+Si occupa di applicare le nanotecnologie nell'ambito pneumologico per trovare una cura basata su nanoparticelle per pazienti che soffrono di rigetto cronico post-trapianto polmonare o fibrosi polmonare.  
+E' giustamente molto orgogliosa di essere moglie e mamma di due bambini. La trovate anche su [Le storie di una biologa](https://www.instagram.com/lestoriediunabiologa).

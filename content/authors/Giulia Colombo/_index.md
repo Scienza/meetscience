@@ -2,14 +2,15 @@
 title: Giulia Colombo
 roles: 
   - Intervistatrice
-avatar: /assets/illustrations/undraw_creative_experiment_8dk3.svg
-profession: Sono Giulia
+avatar: /assets/photos/Giulia.jpg
+profession: dottoranda
 organization:
-  name: No idea
+  name: Università Bicocca
   url: '#'
 social:
   - icon: Email
     url: mailto:g.colombo@meetscience.it
 ---
 
-Ciao, sono Giulia
+Giulia è dottoranda in neurofisiologia presso l'Università di Milano Bicocca. Studia le patologie del sonno. Su Meet Science, oltre a intervistare ospiti di interesse biomedico, cura la rubrica Minorit(ar)y STEM che si occupa di tematiche di genere e altre minoranze nella scienza.
+La trovate anche su [Quasi Come Dire](https://quasicomedire.wordpress.com)
