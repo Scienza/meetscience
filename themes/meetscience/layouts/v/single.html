@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>`
+    {{ if .Params.destination_url }}
+    <meta http-equiv = "refresh" content = "0; url = {{ .Params.destination_url }}" />
+    {{ end }}
+</head>
+<body>
+    {{ if not .Params.destination_url}}
+        <h1>Malformed page. Please report that.</h1>
+    {{ end }}
+</body>
+</html>
