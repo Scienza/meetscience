@@ -1,3 +1,6 @@
+.bg-main {
+  background-color: #08b1a8;
+}
 /*
 Index page
 */
@@ -19,27 +22,65 @@ Index page
     color: #fff;
     text-decoration: none;
 }
+.site-header nav.navbar img.logo{
+  max-height: 35px;
+}
 
 .index-header-teaching {
-  max-height: 400px;
-  width: 100%;
+  width: 140%;
 }
-.index-social-logo-link{
+@media screen and (max-width: 770px) {
+  img.index-header-teaching{
+    display: none;
+    }
+}
+div.social-div .index-social-logo-link{
   text-decoration: none;
 }
+div.social-div .index-social-logo-link.card{
+  color: #eee;
+  /*display: ruby;*/
+  transition: 0.3s;
+  margin-top: 15px;
+  border-radius: 8px;
+}
+div.social-div .index-social-logo-link.card:hover{
+  transform: translateY(-2px);
+}
+div.social-div .index-social-text{
+  font-size: 1.35em;
+  font-family: 'Gelion', sans-serif;
+  font-weight: 500;
+  padding-top: 12px;
+}
+@media screen and (max-width: 360px) {
+  div.social-div .index-social-text{
+    text-align: left;
+    padding-left: 20px;
+    }
+}
+@media screen and (max-width: 300px) {
+  div.social-div .index-social-logo.social-logo{
+    display: none;
+    }
+}
+.index-social-logo-link.card.twitch{background-color: #9146ff;}
+.index-social-logo-link.card.youtube{background-color: #ff0000;} .youtube .social-logo{filter: grayscale() brightness(100);}
+.index-social-logo-link.card.instagram{background-color: #C13584;} .instagram .social-logo{filter: brightness(100);}
+.index-social-logo-link.card.twitter{background-color: #1D9BF0;} .twitter .social-logo{filter: brightness(10);}
+.index-social-logo-link.card.facebook{background-color: #1877f2;}
 .social-div{
   margin-top: 40px;
   margin-bottom: 20px
 }
-.index-social-logo{
+div.social-div .index-social-logo{
   width: 40px;
   height: 40px;
   margin: 0 10px;
-  transition: 0.3s;
-}
-
-.index-social-logo:hover{
-  transform: translateY(-4px);
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .bg-teal{
