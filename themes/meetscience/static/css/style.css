@@ -19,6 +19,9 @@ Index page
     color: #fff;
     text-decoration: none;
 }
+.site-header nav.navbar img.logo{
+  max-height: 35px;
+}
 
 .index-header-teaching {
   max-height: 400px;
