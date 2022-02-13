@@ -1,27 +1,34 @@
 {{ define "main" }}
 <div class="position-relative overflow-hidden text-center">
     <div class="container">
-        <div class="row py-5 mt-5 mb-5" style="height: calc(100vh - 56px);min-height: 400px;">
+        <div class="row py-5 mt-5 mb-5" style="height: calc(100vh - 86px);min-height: 800px;">
             <div class="col-md-8 mx-auto align-self-center">
-                <h1 class="display-4 fw-normal">Meet Science</h1>
+                <h1 class="display-4 fw-normal">
+                    <img src="/assets/logos/Logo.svg" alt="Meet Science" style="height: 80px;max-width: 100%;"/>
+                </h1>
                 <p class="lead fw-normal mission">Avvicinare le persone alla scienza e alla ricerca tramite
                     presentazioni, interviste e interventi ai ricercatori, delinando loro e la loro ricerca protagonisti diretti.<br/>
                     Questo è il traguardo a cui puntiamo.</p>
                     <!-- Assolutamente da rivedere -->
                 <div class="social-div">
-                    <a class="index-social-logo-link" href="https://twitch.tv/MeetScience" alt="Twitch">
+                    <a class="index-social-logo-link card twitch" href="https://twitch.tv/MeetScience" alt="Twitch">
+                        <p class="index-social-text">Siamo su Twitch!</p>
                         <img class="index-social-logo social-logo" src="assets/logos/Twitch.svg" />
                     </a>
-                    <a class="index-social-logo-link" href="https://youtube.com/MeetScience" alt="Youtube">
+                    <a class="index-social-logo-link card youtube" href="https://youtube.com/MeetScience" alt="Youtube">
+                        <p class="index-social-text">Siamo su YouTube!</p>
                         <img class="index-social-logo social-logo" src="assets/logos/Youtube.svg" />
                     </a>
-                    <a class="index-social-logo-link" href="https://instagram.com/Meet.Science" alt="Instagram">
+                    <a class="index-social-logo-link card instagram" href="https://instagram.com/Meet.Science" alt="Instagram">
+                        <p class="index-social-text">Siamo su Instagram!</p>
                         <img class="index-social-logo social-logo" src="assets/logos/Instagram.svg" />
                     </a>
-                    <a class="index-social-logo-link" href="https://twitter.com/MeetScienceIT" alt="Twitter">
+                    <a class="index-social-logo-link card twitter" href="https://twitter.com/MeetScienceIT" alt="Twitter">
+                        <p class="index-social-text">Siamo su Twitter!</p>
                         <img class="index-social-logo social-logo" src="assets/logos/Twitter.svg" />
                     </a>
-                    <a class="index-social-logo-link" href="https://facebook.com/ph.me" alt="Facebook">
+                    <a class="index-social-logo-link card facebook" href="https://facebook.com/ph.me" alt="Facebook">
+                        <p class="index-social-text">Siamo su Facebook!</p>
                         <img class="index-social-logo social-logo" src="assets/logos/Facebook.svg" />
                     </a>
                 </div>
@@ -120,7 +127,7 @@
 </div>
 
 
-
-
+<!-- TODO: Sostituire questo font -->
+<link href="http://fonts.cdnfonts.com/css/gelion" rel="stylesheet">
 
 {{ end }}
