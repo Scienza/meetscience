@@ -1,3 +1,6 @@
+.bg-main {
+  background-color: #08b1a8;
+}
 /*
 Index page
 */
@@ -24,8 +27,12 @@ Index page
 }
 
 .index-header-teaching {
-  max-height: 400px;
-  width: 100%;
+  width: 140%;
+}
+@media screen and (max-width: 770px) {
+  img.index-header-teaching{
+    display: none;
+    }
 }
 div.social-div .index-social-logo-link{
   text-decoration: none;
