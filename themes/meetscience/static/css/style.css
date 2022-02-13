@@ -44,8 +44,8 @@ div.social-div .index-social-logo-link.card{
   margin-top: 15px;
   border-radius: 8px;
 }
-div.social-div index-social-logo-link.card:hover{
-  transform: translateY(2px);
+div.social-div .index-social-logo-link.card:hover{
+  transform: translateY(-2px);
 }
 div.social-div .index-social-text{
   font-size: 1.35em;
