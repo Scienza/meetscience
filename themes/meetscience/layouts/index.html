@@ -4,7 +4,7 @@
         <div class="row py-5 mt-5 mb-5" style="height: calc(100vh - 86px);min-height: 800px;">
             <div class="col-md-8 mx-auto align-self-center">
                 <h1 class="display-4 fw-normal">
-                    <img src="/assets/logos/Logo.svg" alt="Meet Science" style="height: 80px;max-width: 100%;"/>
+                    <img src="/assets/logos/Logo.svg" alt="Meet Science Logo" style="height: 80px;max-width: 100%;"/>
                 </h1>
                 <p class="lead fw-normal mission">Siamo un gruppo di scienziati e persone interessate alla divulgazione. <br/>
                     Vogliamo far avvicinare le persone alla scienza e al mondo della ricerca, sopratutto intervistando direttamente i ricercatori,
@@ -12,25 +12,25 @@
                     </p>
                     <!-- Assolutamente da rivedere -->
                 <div class="social-div">
-                    <a class="index-social-logo-link card twitch" href="https://twitch.tv/MeetScience" alt="Twitch">
+                    <a class="index-social-logo-link card twitch" href="https://twitch.tv/MeetScience" alt="Twitch" rel="noreferrer">
                         <p class="index-social-text">Siamo su Twitch!</p>
-                        <img class="index-social-logo social-logo" src="assets/logos/Twitch.svg" />
+                        <img class="index-social-logo social-logo" src="assets/logos/Twitch.svg" alt="Twitch"/>
                     </a>
-                    <a class="index-social-logo-link card youtube" href="https://youtube.com/MeetScience" alt="Youtube">
+                    <a class="index-social-logo-link card youtube" href="https://youtube.com/MeetScience" alt="Youtube" rel="noreferrer">
                         <p class="index-social-text">Siamo su YouTube!</p>
-                        <img class="index-social-logo social-logo" src="assets/logos/Youtube.svg" />
+                        <img class="index-social-logo social-logo" src="assets/logos/Youtube.svg" alt="Youtube"/>
                     </a>
-                    <a class="index-social-logo-link card instagram" href="https://instagram.com/Meet.Science" alt="Instagram">
+                    <a class="index-social-logo-link card instagram" href="https://instagram.com/Meet.Science" alt="Instagram" rel="noreferrer">
                         <p class="index-social-text">Siamo su Instagram!</p>
-                        <img class="index-social-logo social-logo" src="assets/logos/Instagram.svg" />
+                        <img class="index-social-logo social-logo" src="assets/logos/Instagram.svg" alt="Instagram"/>
                     </a>
-                    <a class="index-social-logo-link card twitter" href="https://twitter.com/MeetScienceIT" alt="Twitter">
+                    <a class="index-social-logo-link card twitter" href="https://twitter.com/MeetScienceIT" alt="Twitter" rel="noreferrer">
                         <p class="index-social-text">Siamo su Twitter!</p>
-                        <img class="index-social-logo social-logo" src="assets/logos/Twitter.svg" />
+                        <img class="index-social-logo social-logo" src="assets/logos/Twitter.svg" alt="Twitter"/>
                     </a>
-                    <a class="index-social-logo-link card facebook" href="https://facebook.com/ph.me" alt="Facebook">
+                    <a class="index-social-logo-link card facebook" href="https://facebook.com/ph.me" alt="Facebook" rel="noreferrer">
                         <p class="index-social-text">Siamo su Facebook!</p>
-                        <img class="index-social-logo social-logo" src="assets/logos/Facebook.svg" />
+                        <img class="index-social-logo social-logo" src="assets/logos/Facebook.svg" alt="Facebook"/>
                     </a>
                 </div>
             </div>
@@ -91,7 +91,7 @@
 
             </div>
             <div class="col-xl-5 align-self-center text-center">
-                <img class="index-header-teaching" src="assets/illustrations/undraw_Social_bio_re_0t9u.svg" />
+                <img class="index-header-teaching" src="assets/illustrations/undraw_Social_bio_re_0t9u.svg" alt="" />
             </div>
         </div>
     </div>
@@ -103,14 +103,14 @@
            {{ if and (isset .Params "profession" ) (isset .Params "roles") }}
            <div class="col-xl-4 col-md-6 col-sm-12">
             <div class="card author-card">
-                <img class="avatar-image" src="{{ .Params.avatar }}" />
+                <img class="avatar-image" src="{{ .Params.avatar }}" loading="lazy"/>
                 <div class="card-body" style="padding-top: 70px">
                     <h5 class="card-title">{{ .Title }}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{ .Params.profession }}</h6>
                     <div class="avatar-social mt-2 mb-2">
                         {{ range .Params.social}}
-                        <a class="index-social-logo-link" href="{{ .url }}" alt="{{ .icon }}">
-                            <img class="index-social-logo social-logo" src="assets/logos/{{ .icon }}.svg" />
+                        <a class="index-social-logo-link" href="{{ .url }}" alt="{{ .icon }}" rel="noreferrer">
+                            <img class="index-social-logo social-logo" src="assets/logos/{{ .icon }}.svg" alt="{{ .Title }} {{ .icon }}"/>
                         </a>
                         {{ end }}
                     </div>
@@ -127,7 +127,7 @@
 
 
 <!-- TODO: Sostituire questo font -->
-<link href="http://fonts.cdnfonts.com/css/gelion" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/gelion" rel="stylesheet">
 
 <script type="text/javascript">
     const vr = document.querySelector("div.latest-videos-rows");
@@ -138,8 +138,8 @@
         let awfulHTML = "";
         for (video of latestVideos.sort((a,b)=> a.time-b.time).slice(0,4) ){
             awfulHTML += `<div class="col-lg-3 col-md-6 col-12" >
-                        <a class="card bg-dark text-white video-card" href="${video.link}" target="_blank">
-                            <img src="${video.image}" class="card-img">
+                        <a class="card bg-dark text-white video-card" href="${video.link}" target="_blank" rel="noreferrer">
+                            <img src="${video.image}" class="card-img" loading="lazy">
                             <div class="card-img-overlay">
                             <h5 class="card-title">${video.title}</h5>
                             </div>

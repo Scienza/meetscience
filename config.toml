@@ -1,6 +1,6 @@
 baseURL = "https://meetscience.it/"
 languageCode = "it-IT"
-title = "Meet Science"
+title = "Meet Science - Divulgazione scientifica"
 theme = "meetscience"
 #[menu]
 #  [[menu.main]]
