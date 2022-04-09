@@ -94,9 +94,9 @@
            {{ $Authors := where $.Site.Pages "Section" "authors" }}
            {{ range $Authors }}
            {{ if and (isset .Params "profession" ) (isset .Params "roles") }}
-           <div class="col-4">
-            <div class="card" style="width: 22rem; margin-top: 90px;">
-                <img class="avatar" src="{{ .Params.avatar }}" style="max-width: 140px; max-height: 140px; position: absolute; align-self: center;top: -80px; border: 1px solid rgba(0,0,0,.125);" />
+           <div class="col-xl-4 col-md-6 col-sm-12">
+            <div class="card author-card">
+                <img class="avatar-image" src="{{ .Params.avatar }}" />
                 <div class="card-body" style="padding-top: 70px">
                     <h5 class="card-title">{{ .Title }}</h5>
                     <h6 class="card-subtitle mb-2 text-muted">{{ .Params.profession }}</h6>
@@ -107,7 +107,7 @@
                         </a>
                         {{ end }}
                     </div>
-                    <p class="card-text">{{ .Content }}</p>
+                    <div class="card-text author-biography">{{ .Content }}</div>
                 </div>
             </div>
         </div>
