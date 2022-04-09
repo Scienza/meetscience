@@ -96,7 +96,32 @@ div.social-div .index-social-logo{
   border-left: 3px solid rgb(0, 108, 151);
   padding: 10px;
   margin: 30px 0;
-} 
+}
+
+a.video-card{
+  aspect-ratio: 16/9;
+  transition: 0.5s ease-in-out;
+  margin-top: 20px
+}
+a.video-card img.card-img{
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+}
+
+a.video-card div.card-img-overlay {
+  background-color: rgba(0, 0, 0, .60);
+  transition: 0.2s linear;
+}
+
+a.video-card:hover{
+  transform: scale(1.2);
+  z-index: 1;
+}
+a.video-card div.card-img-overlay:hover {
+  background-color: rgba(0, 0, 0, .0);
+  color: rgba(0, 0, 0, .0);
+  cursor: pointer;
+}
 
 .author-card{
   margin-top: 100px
