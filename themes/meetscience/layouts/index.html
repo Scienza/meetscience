@@ -72,6 +72,13 @@
 
 
 <div class="position-relative overflow-hidden section-padding">
+    <div class="container-xxl">
+            <h2 style="text-align: center;"> I nostri ultimi video</h2>
+            <div class="row latest-videos-rows" style="padding: 60px 0;">
+            </div>
+        </div>
+
+
     <div class="container">
         <div class="row">
             <div class="col-xl-7 text-center align-self-center">
@@ -121,5 +128,26 @@
 
 <!-- TODO: Sostituire questo font -->
 <link href="http://fonts.cdnfonts.com/css/gelion" rel="stylesheet">
+
+<script type="text/javascript">
+    const vr = document.querySelector("div.latest-videos-rows");
+    const latestVideoURL = "https://assets.meetscience.it/file/meetscience/videos/youtube.json";
+    fetch(latestVideoURL)
+    .then(response => response.json())
+    .then( latestVideos =>{
+        let awfulHTML = "";
+        for (video of latestVideos.sort((a,b)=> a.time-b.time).slice(0,4) ){
+            awfulHTML += `<div class="col-lg-3 col-md-6 col-12" >
+                        <a class="card bg-dark text-white video-card" href="${video.link}" target="_blank">
+                            <img src="${video.image}" class="card-img">
+                            <div class="card-img-overlay">
+                            <h5 class="card-title">${video.title}</h5>
+                            </div>
+                        </a>
+                    </div>`
+        }
+        vr.innerHTML = awfulHTML;
+        });
+</script>
 
 {{ end }}
