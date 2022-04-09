@@ -72,7 +72,7 @@
 
 
 <div class="position-relative overflow-hidden section-padding">
-    <div class="container-xxl">
+    <div class="container">
         <div class="row">
             <div class="col-xl-7 text-center align-self-center">
                 <h1 class="display-4 fw-normal">Chi siamo: lo staff</h1>
@@ -89,19 +89,17 @@
         </div>
     </div>
 
-    <div class="container">
-
-
-
-        {{ $Authors := where $.Site.Pages "Section" "authors" }}
-        {{ range $Authors }}
-        {{ if and (isset .Params "profession" ) (isset .Params "roles") }}
-        <div class="row avatar-row">
-            <div class="col-xl-3 align-self-center text-center ">
-                <img class="avatar" src="{{ .Params.avatar }}" />
-                <div>
-                    <b>{{ .Title }}</b><br/>
-                    <i>{{ .Params.profession }}</i>
+    <div class="container-xxl">
+       <div class="row">
+           {{ $Authors := where $.Site.Pages "Section" "authors" }}
+           {{ range $Authors }}
+           {{ if and (isset .Params "profession" ) (isset .Params "roles") }}
+           <div class="col-4">
+            <div class="card" style="width: 22rem; margin-top: 90px;">
+                <img class="avatar" src="{{ .Params.avatar }}" style="max-width: 140px; max-height: 140px; position: absolute; align-self: center;top: -80px; border: 1px solid rgba(0,0,0,.125);" />
+                <div class="card-body" style="padding-top: 70px">
+                    <h5 class="card-title">{{ .Title }}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{ .Params.profession }}</h6>
                     <div class="avatar-social mt-2 mb-2">
                         {{ range .Params.social}}
                         <a class="index-social-logo-link" href="{{ .url }}" alt="{{ .icon }}">
@@ -109,20 +107,13 @@
                         </a>
                         {{ end }}
                     </div>
+                    <p class="card-text">{{ .Content }}</p>
                 </div>
-                
-            </div>
-            <div class="col-xl-9 text-center align-self-center">
-                <p class="staff-body">
-                    {{ .Content }}
-                </p>
             </div>
         </div>
-            
+            {{ end }}
         {{ end }}
-        {{ end }}
-
-
+    </div>
 
     </div>
 </div>
