@@ -10,7 +10,6 @@
                     Vogliamo far avvicinare le persone alla scienza e al mondo della ricerca, sopratutto intervistando direttamente i ricercatori,
                     primi protagonisti di questa realtà.<br/>
                     </p>
-                    <!-- Assolutamente da rivedere -->
                 <div class="social-div">
                     <a class="index-social-logo-link card twitch" href="https://twitch.tv/MeetScience" alt="Twitch" rel="noreferrer">
                         <p class="index-social-text">Siamo su Twitch!</p>
@@ -42,6 +41,8 @@
 </div>
 
 <!--
+If you think commented code is bad (and, to be clear, it IS), you haven't seen anything yet :3
+
 <div class="position-relative overflow-hidden bg-main section-padding">
     <div class="container-xxl">
         <div class="row">
@@ -50,8 +51,6 @@
             </div>
             <div class="col-xl-7 text-center align-self-center">
                 <h1 class="display-4 fw-normal">Il nostro scopo</h1>
-
-
                 <div class="definition">
                     <i><b>divulgare</b> v. tr. <br />Rendere accessibili a un più vasto pubblico, per mezzo di
                         un’esposizione semplice e piana, nozioni scientifiche e tecniche
@@ -59,7 +58,7 @@
                 </div>
                 <p class="lead fw-normal mission">
                     Vogliamo fare divulgazione, portando persone che la scienza la fanno sotto i riflettori.<br />
-                    <!- Assolutamente da rivedere ->
+                    <!- Assolutamente da rivedere, nel duemilacredici ->
                 </p>
 
 
@@ -126,7 +125,7 @@
 </div>
 
 
-<!-- TODO: Sostituire questo font -->
+<!-- TODO (in un'altra vita): Sostituire questo font -->
 <link href="https://fonts.cdnfonts.com/css/gelion" rel="stylesheet">
 
 <script type="text/javascript">
@@ -138,16 +137,22 @@
         let awfulHTML = "";
         for (video of latestVideos.sort((a,b)=> a.time-b.time).slice(0,4) ){
             awfulHTML += `<div class="col-lg-3 col-md-6 col-12" >
-                        <a class="card bg-dark text-white video-card" href="${video.link}" target="_blank" rel="noreferrer">
-                            <img src="${video.image}" class="card-img" loading="lazy">
+                        <a class="card bg-dark text-white video-card" href="${zigzag(video.link)}" target="_blank" rel="noreferrer">
+                            <img src="${zigzag(video.image)}" class="card-img" loading="lazy">
                             <div class="card-img-overlay">
-                            <h5 class="card-title">${video.title}</h5>
+                            <h5 class="card-title">${zigzag(video.title)}</h5>
                             </div>
                         </a>
                     </div>`
         }
         vr.innerHTML = awfulHTML;
         });
+    zigzag = stuff => stuff.replace(/[^0-9a-zA-Z/: .?=&()\[\]\u007b-\u00ed\u1F30-\u1F5F-]/g, "");  // Absolutely NOT poorly written on purpose.
+                                                                                                // Also absolutely not being sarcastic.
+                                                                                                // This is top notch quality content code.
+                                                                                                // And wait till I need to add more JS 
+                                                                                                
+                                                                                                // Oh man this is gonna backfire @ me sooo badly
 </script>
 
 {{ end }}
