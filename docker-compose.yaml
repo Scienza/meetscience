@@ -1,0 +1,30 @@
+version: "3.7"
+
+services:
+  youtube-metadata:
+    image: alpine
+    container_name: youtube-reloader
+    env_file: .env
+    #environment:
+    #  YT_KEY: AAAABBBBCCCCCDDDDDEEEEE
+    #  CHANNEL_ID: UCxLNJMiurT-aLBzF5fEybFQ
+    #  # B2 APIs
+    #  BUCKET_NAME: bucket
+    #  B2_APPLICATION_KEY_ID: AABBCCDDEE
+    #  B2_APPLICATION_KEY: AABBCCDDEE
+    #  # File settings
+    #  FILE_FOLDER: /tmp/
+    #  FILE_NAME: youtube.json
+    #  REMOTE_PATH: videos/youtube.json
+    #  SLEEP_TIME: 360720 # 12 hours
+    command: 
+      - sh
+      - -c
+      - |
+        apk add py3-pip curl jq --no-cache;
+        pip install --upgrade b2;
+        trap exit TERM; while :; do
+          curl "https://www.googleapis.com/youtube/v3/search?part=snippet&channelId=$${CHANNEL_ID}&maxResults=5&order=date&type=video&key=$${YT_KEY}" | jq '[.items[] | {"title":.snippet.title,"time":.snippet.publishedAt,"image":.snippet.thumbnails.high.url,"link": "https://youtube.com/watch?v=\( .id.videoId )"}]' > $${FILEPATH} && \
+          b2 upload-file $$BUCKET_NAME $$FILEPATH $$REMOTE_PATH
+         sleep $$SLEEP_TIME 
+        done
