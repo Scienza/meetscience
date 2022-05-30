@@ -148,6 +148,19 @@ a.video-card div.card-img-overlay:hover {
   height: 30px;
 }
 
+.index-social-logo-link{
+  padding-right: 12px;
+  text-decoration: none;
+}
+.index-social-logo-link > img{
+  transition: 0.4s ease-in-out;
+}
+
+.index-social-logo-link >img:hover {
+  transform: scale(1.2);
+}
+
+
 .author-biography{
   overflow: hidden;
   /*text-overflow: ellipsis;
