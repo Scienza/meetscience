@@ -76,31 +76,31 @@ If you think commented code is bad (and, to be clear, it IS), you haven't seen a
 
 <div class="position-relative overflow-hidden section-padding">
     <div class="container-xxl">
-            <h2 style="text-align: center;"> I nostri ultimi video</h2>
-            <div class="row latest-videos-rows" style="padding: 60px 0;">
+        <h2 style="text-align: center;"> I nostri ultimi video</h2>
+        <div class="row latest-videos-rows" style="padding: 60px 0;">
             <noscript>Devi attivare javascript per poter vedere questa sezione <br/>
                 You need to enable javascript to see this section of the website</noscript>
-            </div>
-        <hr/>
         </div>
+        <hr/>
+    </div>
 </div>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-xl-7 text-center align-self-center">
-                <h1 class="display-4 fw-normal">Chi siamo: lo staff</h1>
-                <p class="staff-body">
-                    Siamo professori e ricercatori, ma anche studenti da vari ambiti.<br />
-                    Qui potete trovare una breve presentazione ed i nostri contatti.
-                </p>
+<div class="container">
+    <div class="row">
+        <div class="col-xl-7 text-center align-self-center">
+            <h1 class="display-4 fw-normal">Chi siamo: lo staff</h1>
+            <p class="staff-body">
+                Siamo professori e ricercatori, ma anche studenti da vari ambiti.<br />
+                Qui potete trovare una breve presentazione ed i nostri contatti.
+            </p>
 
 
-            </div>
-            <div class="col-xl-5 align-self-center text-center">
-                <img class="index-header-teaching" src="assets/illustrations/undraw_Social_bio_re_0t9u.svg" alt="" />
-            </div>
+        </div>
+        <div class="col-xl-5 align-self-center text-center">
+            <img class="index-header-teaching" src="assets/illustrations/undraw_Social_bio_re_0t9u.svg" alt="" />
         </div>
     </div>
+</div>
 
 <div class="container-xxl">
     <div class="row">
@@ -149,29 +149,29 @@ If you think commented code is bad (and, to be clear, it IS), you haven't seen a
     </div>
 
     <div class="container-xxl">
-       <div class="row">
+        <div class="row">
         {{ range $AbAuthors }}
-           {{ if and (isset .Params "profession" ) (isset .Params "roles") }}
-           <div class="col-xl-4 col-md-6 col-sm-12">
-            <div class="card author-card">
-                <img class="avatar-image" src="{{ .Params.avatar }}" loading="lazy"/>
-                <div class="card-body" style="padding-top: 70px">
-                    <h5 class="card-title">{{ .Title }}</h5>
-                    <h6 class="card-subtitle mb-2 text-muted">{{ .Params.profession }}</h6>
-                    <div class="avatar-social mt-2 mb-2">
-                        {{ range .Params.social}}
-                        <a class="index-social-logo-link" href="{{ .url }}" alt="{{ .icon }}" rel="noreferrer">
-                            <img class="index-social-logo social-logo" src="assets/logos/{{ .icon }}.svg" alt="{{ .Title }} {{ .icon }}"/>
-                        </a>
-                        {{ end }}
+            {{ if and (isset .Params "profession" ) (isset .Params "roles") }}
+            <div class="col-xl-4 col-md-6 col-sm-12">
+                <div class="card author-card">
+                    <img class="avatar-image" src="{{ .Params.avatar }}" loading="lazy"/>
+                    <div class="card-body" style="padding-top: 70px">
+                        <h5 class="card-title">{{ .Title }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ .Params.profession }}</h6>
+                        <div class="avatar-social mt-2 mb-2">
+                            {{ range .Params.social}}
+                            <a class="index-social-logo-link" href="{{ .url }}" alt="{{ .icon }}" rel="noreferrer">
+                                <img class="index-social-logo social-logo" src="assets/logos/{{ .icon }}.svg" alt="{{ .Title }} {{ .icon }}"/>
+                            </a>
+                            {{ end }}
+                        </div>
+                        <div class="card-text author-biography">{{ .Content }}</div>
                     </div>
-                    <div class="card-text author-biography">{{ .Content }}</div>
                 </div>
             </div>
-        </div>
             {{ end }}
         {{ end }}
-    </div>
+        </div>
     </div>
 {{ end }}
 
