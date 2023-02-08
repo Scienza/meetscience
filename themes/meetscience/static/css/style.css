@@ -70,6 +70,7 @@ div.social-div .index-social-text{
 .index-social-logo-link.card.instagram{background-color: #C13584;} .instagram .social-logo{filter: brightness(100);}
 .index-social-logo-link.card.twitter{background-color: #1D9BF0;} .twitter .social-logo{filter: brightness(10);}
 .index-social-logo-link.card.facebook{background-color: #1877f2;}
+.index-social-logo-link.card.telegram{background-color: #0088cc;}
 .social-div{
   margin-top: 40px;
   margin-bottom: 20px
