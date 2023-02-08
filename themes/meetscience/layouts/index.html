@@ -83,7 +83,7 @@ If you think commented code is bad (and, to be clear, it IS), you haven't seen a
             </div>
         <hr/>
         </div>
-
+</div>
 
     <div class="container">
         <div class="row">
@@ -102,10 +102,55 @@ If you think commented code is bad (and, to be clear, it IS), you haven't seen a
         </div>
     </div>
 
+<div class="container-xxl">
+    <div class="row">
+
+        {{ $Authors := where (where ( where 
+                                    .Site.Pages "Section" "authors"
+                                ) ".Params.profession" "!=" nil
+                        ) ".Params.roles" "!=" nil }}
+        {{ range where $Authors ".Params.abandoned" "!=" true }}
+                <div class="col-xl-4 col-md-6 col-sm-12">
+                    <div class="card author-card">
+                        <img class="avatar-image" src="{{ .Params.avatar }}" loading="lazy"/>
+                        <div class="card-body" style="padding-top: 70px">
+                            <h5 class="card-title">{{ .Title }}</h5>
+                            <h6 class="card-subtitle mb-2 text-muted">{{ .Params.profession }}</h6>
+                            <div class="avatar-social mt-2 mb-2">
+                                {{ range .Params.social}}
+                                <a class="index-social-logo-link" href="{{ .url }}" alt="{{ .icon }}" rel="noreferrer">
+                                    <img class="index-social-logo social-logo" src="assets/logos/{{ .icon }}.svg" alt="{{ .Title }} {{ .icon }}"/>
+                                </a>
+                                {{ end }}
+                            </div>
+                            <div class="card-text author-biography">{{ .Content }}</div>
+                        </div>
+                    </div>
+                </div>
+        {{ end }}
+    </div>
+</div>
+
+
+{{ $AbAuthors :=  where $Authors ".Params.abandoned" "==" true }}
+<!-- Abandoned ppl-->
+{{ if gt (len $AbAuthors ) 0}}
+    <div class="container" style="padding-top: 150px">
+        <div class="row">
+            <div class="col-xl-12 text-center align-self-center">
+                <b class="display-6 fw-normal">Membri passati</b>
+                <hr/>
+                <p class="staff-body">
+                    Durante la nostra attività, alcuni membri del team non sono riusciti a mantenere la collaborazione. <br/>
+                    Potete trovare le loro descrizioni ed i loro riferimenti qui sotto:
+                </p>
+            </div>
+        </div>
+    </div>
+
     <div class="container-xxl">
        <div class="row">
-           {{ $Authors := where $.Site.Pages "Section" "authors" }}
-           {{ range $Authors }}
+        {{ range $AbAuthors }}
            {{ if and (isset .Params "profession" ) (isset .Params "roles") }}
            <div class="col-xl-4 col-md-6 col-sm-12">
             <div class="card author-card">
@@ -127,9 +172,8 @@ If you think commented code is bad (and, to be clear, it IS), you haven't seen a
             {{ end }}
         {{ end }}
     </div>
-
     </div>
-</div>
+{{ end }}
 
 
 <!-- TODO (in un'altra vita): Sostituire questo font -->
