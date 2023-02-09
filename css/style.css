@@ -70,6 +70,7 @@ div.social-div .index-social-text{
 .index-social-logo-link.card.instagram{background-color: #C13584;} .instagram .social-logo{filter: brightness(100);}
 .index-social-logo-link.card.twitter{background-color: #1D9BF0;} .twitter .social-logo{filter: brightness(10);}
 .index-social-logo-link.card.facebook{background-color: #1877f2;}
+.index-social-logo-link.card.telegram{background-color: #0088cc;}
 .social-div{
   margin-top: 40px;
   margin-bottom: 20px
@@ -161,27 +162,33 @@ a.video-card div.card-img-overlay:hover {
 }
 
 
-.author-biography{
+
+.card-body{
   overflow: hidden;
-  /*text-overflow: ellipsis;
-  white-space: pre-line;*/
   display: box;
-  max-height: 150px;
-  transition: 0.5s;
+  max-height: 250px;
+  border-radius: 5px;
+  --c: #08B1A8; /* color */
+  --p: 0%;
+  --l: 1s; /* loading time */
+  --d: .5s; /* opening duration */
+  background: linear-gradient(0deg, transparent 0, transparent 50%, var(--c) 50%, var(--c) 100%) 0 0/var(--p,0) 20px no-repeat;
+  transition: max-height var(--d,5s) linear var(--l), background var(--l) ease-in-out;
 }
 
-.author-biography:after{
+.card-body:after{
   content: "...";
   position: absolute;
-  top: 87%;
+  top: 90%;
   right: 2%;
 }
 
-.author-biography:hover, .author-biography:focus, .author-biography:active {
-  overflow: visible;
+.card-body:hover, .card-body:focus, .card-body:active {
+  overflow: clip;
   max-height: 600px;
+  --p: 100%;
 }
-.author-biography:hover:after, .author-biography:focus:after, .author-biography:active:after{
+.card-body:hover:after, .card-body:focus:after, .card-body:active:after{
   content: "";
 }
 
