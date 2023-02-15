@@ -185,7 +185,7 @@ a.video-card div.card-img-overlay:hover {
 
 .card-body:hover, .card-body:focus, .card-body:active {
   overflow: clip;
-  max-height: 600px;
+  max-height: 2000px;
   --p: 100%;
 }
 .card-body:hover:after, .card-body:focus:after, .card-body:active:after{
