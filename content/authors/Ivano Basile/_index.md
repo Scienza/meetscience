@@ -12,4 +12,4 @@ social:
     url: mailto:i.basile@meetscience.it
 ---
 
-Ivano è ricercatore postdoc all'Università di Mons in Belgio. Dopo il dottorato in Normale, si occupa di fisica teorica, in particolare teorie delle stringhe. Dopo una serie di interview di grande successo è stato arruolato nel team di Meet Science. Collabora anche con il canale youtube di [Spazi Attorcigliati](https://www.youtube.com/channel/UCiuphe0ieLa8YQ93wGJTb0Q)
+Ivano è ricercatore postdoc al LMU & Max Planck Institute, Monaco di Baviera, dopo un postdoc all'Università di Mons in Belgio. Dopo il dottorato in Normale, si occupa di fisica teorica, in particolare teorie delle stringhe. Dopo una serie di interview di grande successo è stato arruolato nel team di Meet Science. Collabora anche con il canale youtube di [Spazi Attorcigliati](https://www.youtube.com/channel/UCiuphe0ieLa8YQ93wGJTb0Q)
