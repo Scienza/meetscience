@@ -10,6 +10,7 @@ organization:
 social:
   - icon: Email
     url: mailto:s.inglese@meetscience.it
+abandoned: yes
 ---
 
 Sara è studentessa di biologia alla Federico II di Napoli. Sta svolgendo una tesi sulla caratterizzazione dei pesci e ha contribuito ad alcune pubblicazioni sullo studio della fauna ittica.
