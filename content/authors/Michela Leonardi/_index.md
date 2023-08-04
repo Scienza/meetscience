@@ -12,6 +12,7 @@ social:
     url: https://www.instagram.com/mikleonardi/
   - icon: Email
     url: mailto:m.leonardi@meetscience.it
+abandoned: yes
 ---
 Michela è post-doc nel dipartimento di Zoologia dell’Università di Cambridge (Regno Unito). Per lavoro ricostruisce come il clima del passato ha influenzato l'evoluzione delle delle popolazioni animali e umane integrando la genetica, l'ecologia e l'archeologia.
 Laureata in Scienze preistoriche a Ferrara, ha lavorato al Musèe de l’Homme (Parigi), all’Università di Magonza, alla UCL (Londra), e all’Università di Copenaghen.
